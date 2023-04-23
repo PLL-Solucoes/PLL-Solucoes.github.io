@@ -1,0 +1,335 @@
+/*
+		Author: Lucas Gonçalves
+		Email: lucas.gf.batista@gmail.com
+		Theme: Landing Page - Captação de clientes
+		Version: 1.0
+*/
+
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #1c1c1c;
+  --main-color: #74ac9d;
+  --second-color: #545454;
+  --big-font: 4.5rem;
+  --h2-font: 3.2rem;
+  --p-font: 1.2rem;
+}
+
+/*Estilos para o corpo*/
+
+body {
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+header.sticky {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 0;
+  box-shadow: 0 0 10px rgba(0 0 0 / 20%);
+}
+section {
+  padding-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/*    RODA PÉ   */
+footer {
+  display: flex;
+  align-items: space-around;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer > p {
+  font-size: var(--p-font);
+  color: var(--second-color);
+}
+
+/*    HEADER    */
+#header {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  
+}
+
+.logo-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.logo-header a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.logo-header img {
+  width: 50px;
+
+
+}
+
+#icon-nav {
+  width: 80px;
+  height: 80px;
+}
+
+.navbar-header {
+  display: flex;
+  list-style: none;
+}
+.navbar-header li {
+  position: relative;
+}
+
+.navbar-header a {
+  color: var(--text-color);
+  font-size: var(--p-font);
+  font-weight: 500;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.navbar-header a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--main-color);
+  bottom: -5px;
+  left: 0;
+  transition: ease 0.5s;
+}
+
+.navbar-header a:hover::after {
+  width: 100%;
+}
+
+#navbar-icon {
+  font-size: 25px;
+  color: var(--text-color);
+  z-index: 11;
+  cursor: pointer;
+  display: none;
+}
+
+/* Estilos para a seção de features */
+
+.features > img {
+  width: 500px;
+  height: auto;
+}
+
+.features-text {
+  text-align: center;
+  position: relative;
+}
+
+.features-text h2 {
+  font-size: var(--h2-font);
+  margin: 0;
+}
+
+.features-text p {
+  font-size: var(--p-font);
+  margin: 20px 0;
+}
+
+.button {
+  width: 150px;
+  display: inline-block;
+  background-color: #333;
+  color: var(--bg-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #666;
+}
+
+/* Estilos para a seção de recursos */
+.services h2 {
+  text-align: center;
+  font-size: var(--h2-font);
+}
+
+.services-itens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.service-item {
+  padding: 50px;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+
+.service-item-image img {
+  max-width: 100%;
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.service-item p {
+  font-size: var(--p-font);
+  color: var(--second-color);
+  line-height: 25px;
+}
+
+.service-item:hover {
+  background-color: #fff;
+  box-shadow: 20px 0 90px 0 rgb(10 10 70 / 10%);
+  border-radius: 12px;
+  will-change: transform;
+  transform: perspective(1000px) rotateX(4.8deg) rotateY(10.2deg)
+    scale3d(1, 1, 1);
+}
+
+/* Estilo para chamada */
+.try-free {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  color: var(--bg-color);
+  padding: 50px;
+  text-align: center;
+}
+
+.try-free h2 {
+  font-size: var(--h2-font);
+  margin: 0 0 20px;
+}
+
+.try-free a {
+  background-color: var(--bg-color);
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+  max-width: 100%;
+  width: 500px;
+  text-decoration: none;
+}
+
+.try-free a:hover {
+  background-color: #a3a3a3;
+}
+
+/*    SEÇÃO CONTATO   */
+.container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+#contact {
+  display: flex;
+}
+
+#contact-img > img {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.boxes {
+  display: flex;
+}
+
+.left-box {
+  margin-left: 50px;
+}
+
+.left-box > input[type="email"],
+input[type="text"],
+input[type="tel"] {
+  max-width: 100%;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.right-box {
+  margin-right: 10px;
+}
+.right-box > textarea {
+  max-width: 100%;
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  resize: none;
+  font-size: 1rem;
+}
+
+.button-submit {
+  display: flex;
+  justify-content: center;
+  width: 750px;
+  margin-top: 10px;
+}
+
+.button-submit input[type="submit"] {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #3cb371;
+  color: var(--bg-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-submit input[type="submit"]:hover {
+  background-color: #2e8b57;
+}
